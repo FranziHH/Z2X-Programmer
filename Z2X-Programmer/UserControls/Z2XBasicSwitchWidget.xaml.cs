@@ -37,7 +37,7 @@ public partial class Z2XBasicSwitchWidget : ContentView
 
     // Handling the IsToggled property of the switch
     public static readonly BindableProperty IsToggledProperty =
-    BindableProperty.Create(nameof(IsToggled), typeof(bool), typeof(Z2XBasicSwitchWidget),false, propertyChanged: (bindable, oldvalue, newvalue) =>
+    BindableProperty.Create(nameof(IsToggled), typeof(bool), typeof(Z2XBasicSwitchWidget),false,BindingMode.TwoWay, propertyChanged: (bindable, oldvalue, newvalue) =>
     {
         var control = (Z2XBasicSwitchWidget)bindable;
         control.MySwitch.IsToggled = (bool)newvalue;
