@@ -2220,4 +2220,7 @@ Die Anwendung richtet sich an Einsteiger, die die wichtigsten Funktionen ihrer D
   <data name="AlertVehicleAddressWritten2" xml:space="preserve">
     <value>wurde erfolgreich geschrieben.</value>
   </data>
+  <data name="FrameSettingsExperimentalFeatures" xml:space="preserve">
+    <value>Experimentelle Funktionen aktivieren</value>
+  </data>
 </root>

@@ -165,6 +165,16 @@ namespace Z2XProgrammer.ViewModel
         }
 
         /// <summary>
+        /// Set to TRUE to enable experimental features.
+        /// </summary>
+        [ObservableProperty]
+        internal bool experimentalFeaturesEnabled = false;
+        partial void OnExperimentalFeaturesEnabledChanged(bool value)
+        {
+            Preferences.Default.Set(AppConstants.PREFERENCES_EXPERIMENTALFEATURES_KEY, value == true ? "1" : "0");
+        }
+
+        /// <summary>
         /// Set to TRUE to verify programming operations in POM.
         /// </summary>
         [ObservableProperty]
@@ -313,9 +323,11 @@ namespace Z2XProgrammer.ViewModel
                 AutomaticDecoderDetection = false;
             }
 
+            //  Expert settings
+            ExperimentalFeaturesEnabled = int.Parse(Preferences.Default.Get(AppConstants.PREFERENCES_EXPERIMENTALFEATURES_KEY, AppConstants.PREFERENCES_EXPERIMENTALFEATURES_VALUE)) == 1 ? true : false;
             VerifyPOMWrite = int.Parse(Preferences.Default.Get(AppConstants.PREFERENCES_VERIFYPOMWRITE_KEY, AppConstants.PREFERENCES_VERIFYPOMWRITE_VALUE)) == 1 ? true : false;
-
             QuitOnReadError = int.Parse(Preferences.Default.Get(AppConstants.PREFERENCES_QUITONREADERROR_KEY, AppConstants.PREFERENCES_QUITONREADERROR_VALUE)) == 1 ? true : false;
+
             AdditionalDisplayOfCVValues = int.Parse(Preferences.Default.Get(AppConstants.PREFERENCES_ADDITIONALDISPLAYOFCVVALUES_KEY, AppConstants.PREFERENCES_ADDITIONALDISPLAYOFCVVALUES_VALUE)) == 1 ? true : false;
 
             // Measurement section

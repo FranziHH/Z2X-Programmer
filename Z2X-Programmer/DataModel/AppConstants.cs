@@ -73,6 +73,8 @@ namespace Z2XProgrammer.DataModel
         internal const string PREFERENCES_USERSPECIFICDECSPECFOLDER_VALUE = "";
         internal const string PREFERENCES_VERIFYPOMWRITE_KEY = "VERIFYPOMWRITE";
         internal const string PREFERENCES_VERIFYPOMWRITE_VALUE = "1";
+        internal const string PREFERENCES_EXPERIMENTALFEATURES_KEY = "EXPERIMENTALFEATURES";
+        internal const string PREFERENCES_EXPERIMENTALFEATURES_VALUE = "0";
 
         //  Size and position of the main window.
         internal const string PREFERENCES_WINDOW_MAIN_WIDTH_KEY = "MAINWINDOWWIDTH";

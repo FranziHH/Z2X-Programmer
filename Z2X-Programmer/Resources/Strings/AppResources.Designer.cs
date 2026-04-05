@@ -5010,6 +5010,15 @@ namespace Z2XProgrammer.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable experimental features.
+        /// </summary>
+        public static string FrameSettingsExperimentalFeatures {
+            get {
+                return ResourceManager.GetString("FrameSettingsExperimentalFeatures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings for experts.
         /// </summary>
         public static string FrameSettingsExpertTitle {

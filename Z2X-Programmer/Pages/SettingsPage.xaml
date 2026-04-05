@@ -699,6 +699,7 @@ https://github.com/PeterK78/Z2X-Programmer?tab=GPL-3.0-1-ov-file.
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
 
                     <!-- Do not cancel in the event of a read error -->
@@ -706,6 +707,9 @@ https://github.com/PeterK78/Z2X-Programmer?tab=GPL-3.0-1-ov-file.
 
                     <!-- Verify POM writes -->
                     <usercontrols:Z2XBasicSwitchWidget x:Name="FrameSettingsVerifyPOMWrite" Grid.Row="1" Grid.Column="0" CVText="" IsToggled="{Binding VerifyPOMWrite}"  CVVisible="False" DescriptionText="{x:Static strings:AppResources.FrameSettingsVerifyPOMWrite}" IsVisible="True" IsEnabled="True"></usercontrols:Z2XBasicSwitchWidget>
+                    
+                    <!-- Enable/disable experimental options -->
+                    <usercontrols:Z2XBasicSwitchWidget x:Name="FrameSettingsExperimentalFeatures" Grid.Row="2" Grid.Column="0" CVText="" IsToggled="{Binding ExperimentalFeaturesEnabled}"  CVVisible="False" DescriptionText="{x:Static strings:AppResources.FrameSettingsExperimentalFeatures}" IsVisible="True" IsEnabled="True"></usercontrols:Z2XBasicSwitchWidget>
 
                 </Grid>
             </Border>
