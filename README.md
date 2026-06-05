@@ -1,9 +1,20 @@
-<img src="https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/appiconfg.svg" width="100"/>
+# ⚠️ Important Notice / Archive Mirror
+
+This repository is an unmodified copy (mirror) of the original **Z2X-Programmer** project.
+
+The original author (**PeterK78**) has deleted their GitHub account and the original repository. Since this software is actively used by several users and was released under the **GNU General Public License v3**, this mirror was created to keep the source code available to the community.
+
+* **Original URL (now defunct):** https://github.com/PeterK78/Z2X-Programmer
+* **Status:** The code is 100% unmodified. All credits go to PeterK78.
+
+---
+
+<img src="Assets/appiconfg.svg" width="100"/>
 
 # Z2X-Programmer
-[![Z2X-Programmer Documentation](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X_Programmer-Badge-Documentation.svg)](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/Programmbeschreibung%20Z2X-Programmer.pdf)
-[![Download Z2X-Programmer](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X_Programmer-Badge-Download.svg)](https://github.com/PeterK78/Z2X-Programmer/releases)
-[![Download Z2X-Programmer](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X_Programmer-Badge-Download-Dev.svg)](https://github.com/PeterK78/Z2X-Programmer/actions)
+[![Z2X-Programmer Documentation](Assets/Z2X_Programmer-Badge-Documentation.svg)](Docs/Programmbeschreibung%20Z2X-Programmer.pdf)
+[![Download Z2X-Programmer](Assets/Z2X_Programmer-Badge-Download.svg)](../../releases)
+[![Download Z2X-Programmer](Assets/Z2X_Programmer-Badge-Download-Dev.svg)](../../actions)
 
 Z2X-Programmer is an application to configure locomotive and function decoders by using a Roco / Fleischmann Z21 compatible digital command station. 
 The application is aimed at beginner level users who want to configure the most essential functions of their decoders in a simple and intuitive way. 
@@ -12,25 +23,25 @@ The application is aimed at beginner level users who want to configure the most 
 >The application is currently in a beta state.
 
 ## Z2X-Programmer in the press
-* [Digitale Modellbahn 2-2025](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/DiMo_2025_02_014-015_HH_Z2X-Programmer.pdf)
+* [Digitale Modellbahn 2-2025](Assets/DiMo_2025_02_014-015_HH_Z2X-Programmer.pdf)
 
 ## Overview
 
 The application provides the following features:
 
-*  Configuration of various addresses
-*  Configuration of drive properties
-*  Configuration of motor properties
-*  Configuration of the function keys
-*  Configuration of selected sound functions
-*  Configuration of selected lighting functions
-*  Display of decoder information such as decoder name, software version, etc.
-*  Configuration of the protocols
-*  Configuration of security functions
-*  Maintenance functions
-*  etc.
+* Configuration of various addresses
+* Configuration of drive properties
+* Configuration of motor properties
+* Configuration of the function keys
+* Configuration of selected sound functions
+* Configuration of selected lighting functions
+* Display of decoder information such as decoder name, software version, etc.
+* Configuration of the protocols
+* Configuration of security functions
+* Maintenance functions
+* etc.
 
-> A detailed list of all supported functions can be found on the following page: [List of supported decoder features](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/SupportedDecoderFeatures_en.md).
+> A detailed list of all supported functions can be found on the following page: [List of supported decoder features](Docs/en/SupportedDecoderFeatures_en.md).
 
 User-friendliness is supported with the following functions:
 
@@ -57,24 +68,24 @@ You can create your own decoder specification file at any time.
 > At the moment the focus is on Z21 digital command stations and ZIMO decoders - this is the hardware I currently own.
 
 ## Screenshots
-![Changing the motor characteristics](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X-Programmer-MotorCharacteristics.png "Changing the motor characteristics")
+![Changing the motor characteristics](Assets/Z2X-Programmer-MotorCharacteristics.png "Changing the motor characteristics")
 
-![Changing the drive characteristics](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X-Programmer-DriveCharacteristics.png "Changing the drive characteristics")
+![Changing the drive characteristics](Assets/Z2X-Programmer-DriveCharacteristics.png "Changing the drive characteristics")
 
-![Configuring function keys](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X-Programmer-FunctionKeys.png "Configuring function keys")
+![Configuring function keys](Assets/Z2X-Programmer-FunctionKeys.png "Configuring function keys")
 
-![Search](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X-Programmer-Search.png "Search")
+![Search](Assets/Z2X-Programmer-Search.png "Search")
 
-![Android](https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/Z2X-Programmer-Android.png "Android")
+![Android](Assets/Z2X-Programmer-Android.png "Android")
 
 ## Documentation
 
-* [Installation instructions](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/InstallationInstructions_en.md)
-* [Getting started](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/GettingStarted_en.md)
-* [List of supported decoder features](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/SupportedDecoderFeatures_en.md)
-* [Recommended Z21 settings](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/RecommendedZ21Settings_en.md)
-* [Locomotive list](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/LocomotiveList_en.md)
-* [FAQ](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/FAQ_en.md)
+* [Installation instructions](Docs/en/InstallationInstructions_en.md)
+* [Getting started](Docs/en/GettingStarted_en.md)
+* [List of supported decoder features](Docs/en/SupportedDecoderFeatures_en.md)
+* [Recommended Z21 settings](Docs/en/RecommendedZ21Settings_en.md)
+* [Locomotive list](Docs/en/LocomotiveList_en.md)
+* [FAQ](Docs/en/FAQ_en.md)
 
 ## Notes
 
@@ -97,5 +108,3 @@ You can create your own decoder specification file at any time.
 
 * The original source code in this repository is licensed under the GNU GPLv3 license.
 * Microsoft, Z21, Fleischmann, ZIMO and Roco are registered trademarks of their respective companies.
-
-
