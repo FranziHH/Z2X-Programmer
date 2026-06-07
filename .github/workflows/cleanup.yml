@@ -1,0 +1,52 @@
+name: Global Cleanup
+
+on:
+  workflow_dispatch: # Manuell im UI starten
+  schedule:
+    - cron: '0 0 * * 0' # Jeden Sonntag automatisch
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Delete old runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Liste aller Workflow-IDs holen. Falls leer, bricht das Skript nicht ab.
+          WORKFLOW_IDS=$(gh api repos/${{ github.repository }}/workflows --jq '.workflows[].id' 2>/dev/null || true)
+
+          if [ -z "$WORKFLOW_IDS" ]; then
+            echo "Keine Workflows im Repository gefunden."
+            exit 0
+          fi
+
+          for WORKFLOW_ID in $WORKFLOW_IDS; do
+            echo "----------------------------------------"
+            echo "Verarbeite Workflow-ID: $WORKFLOW_ID"
+            
+            # Alle Run-IDs für diesen Workflow holen.
+            RUN_IDS=$(gh api repos/${{ github.repository }}/workflows/$WORKFLOW_ID/runs --jq '.workflow_runs[].id' 2>/dev/null || true)
+            
+            if [ -z "$RUN_IDS" ]; then
+              echo "Keine Runs für diesen Workflow vorhanden. Überspringe."
+              continue
+            fi
+            
+            COUNT=0
+            for RUN_ID in $RUN_IDS; do
+              COUNT=$((COUNT + 1))
+              
+              # Behalte die neuesten 2 Runs im Speicher
+              if [ $COUNT -le 2 ]; then
+                echo "Behalte Run: $RUN_ID"
+                continue
+              fi
+              
+              # Alles, was älter ist, wird gelöscht
+              echo "Lösche alten Run: $RUN_ID"
+              gh api repos/${{ github.repository }}/actions/runs/$RUN_ID -X DELETE || echo "Konnte Run $RUN_ID nicht löschen."
+            done
+          done

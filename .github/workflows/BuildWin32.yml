@@ -21,8 +21,45 @@ jobs:
       run: dotnet workload install maui
     - name: Build
       run: dotnet build Z2X-Programmer/Z2X-Programmer.csproj -c Release -f net10.0-windows10.0.19041.0 /p:Platform=x86
+
+    # NEU: Erstellt die fehlende ZIP-Datei aus dem Build-Ausgabeordner
+    - name: Create WIN32 ZIP Archive
+      shell: pwsh
+      run: |
+        Compress-Archive -Path Z2X-Programmer/bin/x86/Release/net10.0-windows10.0.19041.0/win-x86/* -DestinationPath Z2X-Programmer/bin/x86/Release/net10.0-windows10.0.19041.0/Z2X-Programmer-Windows-WIN32.zip -Force
+
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.6.2
       with:
             name: Z2X-Programmer-Windows-WIN32 
-            path: .\**\bin\x86\Release\net10.0-windows10.0.19041.0\win-x86\**\*.*
+            # path: .\**\bin\x86\Release\net10.0-windows10.0.19041.0\win-x86\**\*.*
+            path: Z2X-Programmer/bin/x86/Release/net10.0-windows10.0.19041.0/win-x86/
+
+# --- SCHRITT 1: LATEST RELEASE AKTUALISIEREN ---
+    - name: Update Latest Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: latest
+        name: "Z2X Programmer - Latest Build"
+        body: "Automatischer Build vom aktuellen Stand."
+        draft: false
+        prerelease: false
+        make_latest: true
+        files: |
+          Z2X-Programmer/bin/x86/Release/net10.0-windows10.0.19041.0/Z2X-Programmer-Windows-WIN32.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # --- SCHRITT 2: TAG RELEASE ERSTELLEN (NUR WENN EIN TAG DIE PIPELINE AUSGELÖST HAT) ---
+    - name: Create Tag Release
+      if: ${{ startsWith(github.ref, 'refs/tags/') }}
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ github.ref_name }}
+        name: "Release ${{ github.ref_name }}"
+        draft: false
+        prerelease: false
+        files: |
+          Z2X-Programmer/bin/x86/Release/net10.0-windows10.0.19041.0/Z2X-Programmer-Windows-WIN32.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

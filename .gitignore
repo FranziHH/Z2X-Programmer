@@ -362,3 +362,11 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Z2X-Programmer/Setup/Archive/0.1.2.0-beta.1
+
+# Android Signaturschlüssel (Keystores) ausschließen
+*.keystore
+*.jks
+*.p12
+
+# Build Scripts
+build*.bat
