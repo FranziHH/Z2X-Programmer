@@ -12,7 +12,7 @@ The original author (**PeterK78**) has deleted their GitHub account and the orig
     This branch contains updated links in the builds, actions, and source code. Because the original author's repository and homepage URLs are now defunct, these references have been redirected here to ensure that built binaries and documentation links do not lead to empty pages.
 
 * **Original URL (now defunct):** https://github.com/PeterK78/Z2X-Programmer
-* **Status:** The code is 100% unmodified. All credits go to PeterK78.
+* **Status:** The code in Branch `archiv` is 100% unmodified. All credits go to PeterK78.
 
 ---
 
@@ -110,6 +110,9 @@ You can create your own decoder specification file at any time.
 ## Technical stuff
 
 * Z2X-Programmer is build with Microsoft [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/en-us/apps/maui)
+* Requires .NET 10.0 Desktop Runtime (v10.0.8):
+  * [Download Desktop Runtime v10.0.8 (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-10.0.8-windows-x86-installer?cid=getdotnetcore)
+  * [Download Desktop Runtime v10.0.8 (x64)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-10.0.8-windows-x64-installer?cid=getdotnetcore)
 
 ## License
 
