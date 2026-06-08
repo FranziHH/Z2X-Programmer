@@ -1,8 +1,15 @@
-# ⚠️ Important Notice / Archive Mirror
+# ⚠️ Important Notice: Repository Mirror & Active Updates
 
-This repository is an unmodified copy (mirror) of the original **Z2X-Programmer** project.
+This repository serves two purposes: keeping the original, unedited source code available to the community, and providing functioning builds for active users.
 
-The original author (**PeterK78**) has deleted their GitHub account and the original repository. Since this software is actively used by several users and was released under the **GNU General Public License v3**, this mirror was created to keep the source code available to the community.
+The original author (**PeterK78**) has deleted their GitHub account and the original repository. Since this software is actively used and was released under the **GNU General Public License v3**, this mirror was created to preserve the project.
+
+### 📌 Branch Overview
+
+*   **`archiv` Branch (100% Unmodified)**
+    This branch contains the exact, unedited source code of the last public release by PeterK78. Use this branch if you need the original, untouched repository state.
+*   **`master` Branch (Updated Links & Builds)**
+    This branch contains updated links in the builds, actions, and source code. Because the original author's repository and homepage URLs are now defunct, these references have been redirected here to ensure that built binaries and documentation links do not lead to empty pages.
 
 * **Original URL (now defunct):** https://github.com/PeterK78/Z2X-Programmer
 * **Status:** The code is 100% unmodified. All credits go to PeterK78.

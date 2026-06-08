@@ -4,7 +4,7 @@ Documentation on the first steps with Z2X-Programmer.
 >[!NOTE]
 > Z2X-Programmer must be installed before you can carry out this quick guide. Please refer to the following instructions:
 >
-> https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/InstallationInstructions_en.md
+> ./InstallationInstructions_en.md
 
 This guide is divided into five sections:
 
@@ -19,55 +19,55 @@ This guide is divided into five sections:
 * Make sure that your Z21 digital command station can be reached via the network.
 * Open the tab `Settings`:
 
-![Open the “Settings” tab"](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedSettings.png)
+![Open the “Settings” tab"](./Assets/Z2X-Programmer-GettingStartedSettings.png)
 
 * Enter the IP address of your Z21 digital command station in the IP address field:
 
-![Enter the IP address of your Z21 digital command station](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedEnterIPAddress.png "Enter the IP address of your Z21 digital command station")
+![Enter the IP address of your Z21 digital command station](./Assets/Z2X-Programmer-GettingStartedEnterIPAddress.png "Enter the IP address of your Z21 digital command station")
 
 * Test the connection by clicking on the `Test connection` button:
 
-![Test the connection](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedTestConnection.png "Test the connection")
+![Test the connection](./Assets/Z2X-Programmer-GettingStartedTestConnection.png "Test the connection")
 
 * If no connection can be established, you will receive the following message:
 
-![No connection with Z21 command station](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedConnectionFailed.png "No connection with Z21 command station")
+![No connection with Z21 command station](./Assets/Z2X-Programmer-GettingStartedConnectionFailed.png "No connection with Z21 command station")
 
 In this case, check whether you have entered the correct IP address and whether the Z21 command station can be reached.
 
 * If a connection has been established, you will receive the following message:
   
-![Connection successfully established](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedConnectionSuccess.png "Connection successfully established")
+![Connection successfully established](./Assets/Z2X-Programmer-GettingStartedConnectionSuccess.png "Connection successfully established")
 
 * If the connection has been successfully established, the current operating mode of the Z21 digital central unit is displayed at the top left of the window:
 
-![Connection successfully established](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedOperatingMode.png "Connection successfully established")
+![Connection successfully established](./Assets/Z2X-Programmer-GettingStartedOperatingMode.png "Connection successfully established")
 
 ## 2. Reading out a decoder
 
 * Select the desired programming method: `Main track` or `Programming track`.
 
-![Reading out a decoder](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedSelectProgramMethod.png "Reading out a decoder")
+![Reading out a decoder](./Assets/Z2X-Programmer-GettingStartedSelectProgramMethod.png "Reading out a decoder")
 
 * If you have selected the `Main track` programming method, you must now enter the vehicle address of the decoder or locomotive. If you have selected the programming method `Programming track`, the vehicle address is not required for the readout.
 
-![Enter the address](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedSetAddress.png "Enter the address")
+![Enter the address](./Assets/Z2X-Programmer-GettingStartedSetAddress.png "Enter the address")
 
 * Now click on the `Read decoder` button:
 
-![Read decoder](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedUploadData.png "Read decoder")
+![Read decoder](./Assets/Z2X-Programmer-GettingStartedUploadData.png "Read decoder")
 
 * Wait until all data has been read from the decoder:
 
-![Wait until the decoder has been read out](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedWaitForUploadComplete.png "Wait until the decoder has been read out")
+![Wait until the decoder has been read out](./Assets/Z2X-Programmer-GettingStartedWaitForUploadComplete.png "Wait until the decoder has been read out")
 
 * The decoder has been successfully read out:
 
-![The decoder was successfully read out](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedUploadComplete.png "The decoder was successfully read out")
+![The decoder was successfully read out](./Assets/Z2X-Programmer-GettingStartedUploadComplete.png "The decoder was successfully read out")
 
 * Z2X-Programmer tries to recognize the decoder during readout:
 
-![The type of decoder](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedTypeOfDecoder.png "The type of decoder")
+![The type of decoder](./Assets/Z2X-Programmer-GettingStartedTypeOfDecoder.png "The type of decoder")
 
 * The decoder has been successfully read out and can now be configured.
 
@@ -75,35 +75,35 @@ In this case, check whether you have entered the correct IP address and whether 
 
 * Z2X-Programmer organizes all settings into tabs. These tabs can be called up via the flyout menu:
 
-![Das Flyout-Menü](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedFlyoutMenu.png "Das Flyout-Menü")
+![Das Flyout-Menü](./Assets/Z2X-Programmer-GettingStartedFlyoutMenu.png "Das Flyout-Menü")
 
 * Nevertheless, it is sometimes difficult to find the desired function on the various tabs. In this case, use the `Search` function.
 * To do this, open the `Search` tab via the flyout menu and search for the term “Driving direction”.
 * Select the result “Direction of travel inverted (CV29.0)”.
 
-![Search by direction of travel](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedSearchDriveDirection.png "Search by direction of travel")
+![Search by direction of travel](./Assets/Z2X-Programmer-GettingStartedSearchDriveDirection.png "Search by direction of travel")
 
 * Z2X-Programmer now switches directly to the desired function.
 
-![The required function](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-DriveDirectionFound.png "The required function")
+![The required function](./Assets/Z2X-Programmer-DriveDirectionFound.png "The required function")
   
 ## 4. Transferring a new configuration
 
 * Change any setting, e.g. reverse the direction of travel:
 
-![Reverse direction of travel]( https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedInvertDriveDirection.png "Reverse direction of travel")
+![Reverse direction of travel]( ./Assets/Z2X-Programmer-GettingStartedInvertDriveDirection.png "Reverse direction of travel")
 
 * You can then transfer the new settings to the decoder using the `Write modified values to decoder` function:
 
-![Describe decoder](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedDownloadData.png "Describe decoder")
+![Describe decoder](./Assets/Z2X-Programmer-GettingStartedDownloadData.png "Describe decoder")
 
 * Before the download, Z2X-Programmer informs you which configuration variables will be changed. Click on `Yes` to start transferring the settings.
 
-![The decoder will be configured](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedSummary.png "The decoder will be configured")
+![The decoder will be configured](./Assets/Z2X-Programmer-GettingStartedSummary.png "The decoder will be configured")
 
 * If the download was successful, the following message appears:
 
-![The decoder has been successfully configured](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GettingStartedDownloadSuccess.png "The decoder has been successfully configured")
+![The decoder has been successfully configured](./Assets/Z2X-Programmer-GettingStartedDownloadSuccess.png "The decoder has been successfully configured")
 
  
 ## 5. What you could do next
@@ -111,9 +111,9 @@ In this case, check whether you have entered the correct IP address and whether 
 ### Configure the locomotive list
 The following link opens a description of how to configure the locomotive list:
 
-https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/LocomotiveList_en.md
+./LocomotiveList_en.md
 
-![Locomotive list](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-LocomotiveListOverview.png)
+![Locomotive list](./Assets/Z2X-Programmer-LocomotiveListOverview.png)
 
 
 

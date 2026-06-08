@@ -72,7 +72,7 @@ public partial class LicensePage : ContentPage
     async void LicenseButton_Clicked(object sender, EventArgs e)
     {
         
-        await Browser.OpenAsync("https://github.com/PeterK78/Z2X-Programmer?tab=GPL-3.0-1-ov-file");
+        await Browser.OpenAsync("https://github.com/FranziHH/Z2X-Programmer?tab=GPL-3.0-1-ov-file");
     }
 
     /// <summary>

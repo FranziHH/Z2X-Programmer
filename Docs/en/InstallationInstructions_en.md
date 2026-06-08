@@ -1,4 +1,4 @@
-<img src="https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/appiconfg.svg" width="100"/>
+<img src="../../Assets/appiconfg.svg" width="100"/>
 
 # Installation Guide
 
@@ -13,7 +13,7 @@ Developer versions are automatically created as soon as a change is made to the 
 2. Android
 3. Windows 10/11 x32 devices
 
-Development versions are available here: https://github.com/PeterK78/Z2X-Programmer/actions
+Development versions are available here: https://github.com/FranziHH/Z2X-Programmer/actions
 
 This guide describes how to install the stable versions.
 
@@ -25,66 +25,66 @@ This guide describes how to install the stable versions.
 ### Step 1: Download the Z2X-Programmer installation files
 The Z2X-Programmer installation files are currently provided in the form of a ZIP archive. This ZIP archive can be found in the `Releases` section of the following GitHub page:
 
-[https://github.com/PeterK78/Z2X-Programmer](https://github.com/PeterK78/Z2X-Programmer)
+[https://github.com/FranziHH/Z2X-Programmer](https://github.com/FranziHH/Z2X-Programmer)
 
-![Releases section](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GitHub-Releases.png)
+![Releases section](./Assets/Z2X-Programmer-GitHub-Releases.png)
 
 To install the Microsoft Windows version, first select the desired version (release) and then download the following ZIP archive to your Windows PC:
 
 >[!NOTE]
 >It is best to use the latest version of Z2X-Programmer. The following screenshot most likely shows an outdated version.
 
-![Releases section](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GitHub-SelectZIPArchive-Windows.png)
+![Releases section](./Assets/Z2X-Programmer-GitHub-SelectZIPArchive-Windows.png)
 
 ### Step 2: Copy the ZIP archive to the destination folder
 You can copy Z2X-Programmer into any directory on your PC. In this description, we use the Windows `Documents` folder.
 
-![Copy to documents folder](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2XProgrammer-Copy2Documents.png)
+![Copy to documents folder](./Assets/Z2XProgrammer-Copy2Documents.png)
 
 ### Step 3: Unpacking the ZIP archive
 Extract the ZIP archive. A new folder with the files of Z2X-Programmer will be created.
 
-![Extract ZIP archive](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2XProgrammer-ExtractZIP.png)
+![Extract ZIP archive](./Assets/Z2XProgrammer-ExtractZIP.png)
 
 ### Step 4: Start
 Open the newly created folder and start the Z2X-Programmer.exe file.
 
-![Run the Z2X-Programmer.exe](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-DoubleClickZ2XExe.png)
+![Run the Z2X-Programmer.exe](./Assets/Z2X-Programmer-DoubleClickZ2XExe.png)
 
 ### Step 5: Installing the .NET Desktop Runtime (optional)
 If the .NET Desktop Runtime is missing on your system, it must be installed. The following dialog appears:
 
-![.NET Runtime installation](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-InstallNetDesktopRunTime.png)
+![.NET Runtime installation](./Assets/Z2X-Programmer-InstallNetDesktopRunTime.png)
 
 After clicking on `Download it now`, your browser will open. The .NET Desktop Runtime download usually starts automatically. If not, click on the correct download link.
 
 >[!NOTE]
 >It is best to use the latest version of .NET Desktop Runtime. The following screenshot most likely shows an outdated version.
 
-![Your Browser opens](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2XProgrammer-WebBrowser.png)
+![Your Browser opens](./Assets/Z2XProgrammer-WebBrowser.png)
 
 Start the EXE file to start the installation of the .NET Desktop Runtime:
 
-![Start the .NET Runtime installation](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2XProgrammer-NETRuntimeDownload.png)
+![Start the .NET Runtime installation](./Assets/Z2XProgrammer-NETRuntimeDownload.png)
 
 If the runtime has been installed correctly, the following dialog box appears
 
-![.NET Runtime installation finished](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-NetDesktopRunTime.png)
+![.NET Runtime installation finished](./Assets/Z2X-Programmer-NetDesktopRunTime.png)
 
 Run the Z2X-Programmer.exe file again.
 
-![Run the Z2X-Programmer.exe](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-DoubleClickZ2XExe.png)
+![Run the Z2X-Programmer.exe](./Assets/Z2X-Programmer-DoubleClickZ2XExe.png)
 
 >[!NOTE]
 > If you did not reboot your PC after the installation of the .NET Desktop Runtime it may happen that you have to start Z2X-Programmer.exe twice.
 
 ### Step 6: Accept the license agreement
 
-![Accept the license agreemen](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-LicenseAgreement.png)
+![Accept the license agreemen](./Assets/Z2X-Programmer-LicenseAgreement.png)
 
 The installation is now complete. Z2X Programmer will start with a setup wizard.
 
-![The setup wizard starts](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2XProgrammer-FirstStartWizard.png)
+![The setup wizard starts](./Assets/Z2XProgrammer-FirstStartWizard.png)
 
 ## Android
 
@@ -107,30 +107,30 @@ Due to security concerns, Android prevents the installation of apps that are off
 ### Step 2: Download the Z2X-Programmer installation files
 The Z2X-Programmer installation files are currently provided in the form of a ZIP archive. This ZIP archive can be found in the `Releases` section of the following GitHub page:
 
-[https://github.com/PeterK78/Z2X-Programmer](https://github.com/PeterK78/Z2X-Programmer)
+[https://github.com/FranziHH/Z2X-Programmer](https://github.com/FranziHH/Z2X-Programmer)
 
-![Releases section](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GitHub-Releases.png)
+![Releases section](./Assets/Z2X-Programmer-GitHub-Releases.png)
 
 To install the Android version, first select the desired version (release) and then download the following ZIP archive to your Android device:
 
-![Releases section](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-GitHub-SelectZIPArchive-Android.png)
+![Releases section](./Assets/Z2X-Programmer-GitHub-SelectZIPArchive-Android.png)
 
 ### Step 3: Extract the APK file
-![Start the application](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidExtractAPK.png)
+![Start the application](./Assets/Z2X-Programmer-AndroidExtractAPK.png)
 
 ### Step 4: Run the APK file
 
-![Run the APK file](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidRunAPK.png)
+![Run the APK file](./Assets/Z2X-Programmer-AndroidRunAPK.png)
 
-![Allow the installation](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidAllowInstallation.png)
+![Allow the installation](./Assets/Z2X-Programmer-AndroidAllowInstallation.png)
 
-![Start the installation](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidStartInstallation.png)
+![Start the installation](./Assets/Z2X-Programmer-AndroidStartInstallation.png)
 
 ### Step 5: Start the application
-![Start the application](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidIcon.png)
+![Start the application](./Assets/Z2X-Programmer-AndroidIcon.png)
 
 ### Step 6: Accept the license agreement
-![Accept the license agreement](https://github.com/PeterK78/Z2X-Programmer/blob/master/Docs/en/Assets/Z2X-Programmer-AndroidAcceptLicense.png)
+![Accept the license agreement](./Assets/Z2X-Programmer-AndroidAcceptLicense.png)
 
 The installation is now complete
 

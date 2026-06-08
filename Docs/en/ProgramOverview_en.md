@@ -1,4 +1,4 @@
-<img src="https://github.com/PeterK78/Z2X-Programmer/blob/master/Assets/appiconfg.svg" width="100"/>
+<img src="../../Assets/appiconfg.svg" width="100"/>
 
 # Program overview
 Z2X-Programmer is an application to configure locomotive and function decoders by using a Roco / Fleischmann Z21 compatible digital command station.
