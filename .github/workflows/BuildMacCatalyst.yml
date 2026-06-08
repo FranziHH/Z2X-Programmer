@@ -1,0 +1,84 @@
+name: Build Z2X-Programmer-MacCatalyst
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+      inputs:
+        update_release:
+          description: 'Latest Release aktualisieren?'
+          required: true
+          type: boolean
+          default: true
+
+jobs:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip]')"
+    strategy:
+      matrix:
+        include:
+          - arch: x64
+            runner: macos-14
+            rid: maccatalyst-x64
+          - arch: arm64
+            runner: macos-14-arm64
+            rid: maccatalyst-arm64
+
+    runs-on: ${{ matrix.runner }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install MAUI workload
+        run: dotnet workload install maui
+
+      - name: Restore dependencies
+        run: dotnet restore Z2X-Programmer/Z2X-Programmer.csproj
+
+      - name: Build Mac Catalyst
+        run: dotnet build Z2X-Programmer/Z2X-Programmer.csproj -c Release -f net10.0-maccatalyst /p:RuntimeIdentifier=${{ matrix.rid }} --no-restore
+
+      - name: Create Mac Catalyst ZIP Archive
+        run: |
+          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst
+          zip -r Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip "${{ matrix.rid }}"
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: Z2X-Programmer-MacCatalyst-${{ matrix.arch }}
+          path: Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+
+      - name: Update Latest Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Z2X Programmer - Latest Mac Catalyst Build"
+          body: "Automatischer Mac Catalyst Build vom aktuellen Stand."
+          draft: false
+          prerelease: false
+          make_latest: true
+          files: |
+            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Tag Release
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
+          draft: false
+          prerelease: false
+          files: |
+            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

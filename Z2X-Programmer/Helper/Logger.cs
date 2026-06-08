@@ -23,7 +23,9 @@ https://github.com/PeterK78/Z2X-Programmer?tab=GPL-3.0-1-ov-file.
 
 using MetroLog.MicrosoftExtensions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Storage;
 using System.Diagnostics;
+using System.IO;
 using Z2XProgrammer.DataModel;
 
 namespace Z2XProgrammer.Helper
@@ -37,14 +39,16 @@ namespace Z2XProgrammer.Helper
 
         public static ILogger? _logger;
 
-        private static ILoggerFactory loggerFactory = LoggerFactory.Create(builder => builder.AddStreamingFileLogger(options =>
-        {
-            options.RetainDays = 2;
-            options.FolderPath = Path.Combine(FileSystem.CacheDirectory, "Z2XProgrammerLogs");
-        }));
+        private static ILoggerFactory? loggerFactory;
 
         public static ILogger Init(string categoryName)
         {
+            loggerFactory ??= LoggerFactory.Create(builder => builder.AddStreamingFileLogger(options =>
+            {
+                options.RetainDays = 2;
+                options.FolderPath = Path.Combine(FileSystem.CacheDirectory, "Z2XProgrammerLogs");
+            }));
+
             _logger = loggerFactory.CreateLogger(categoryName);
             return _logger;
         }

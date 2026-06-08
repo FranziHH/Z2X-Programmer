@@ -171,7 +171,13 @@ namespace Z2XProgrammer
             builder.Logging.AddDebug();
 #endif
 
-            // Initialize the logging service.
+            Routing.RegisterRoute("ZIMOFunctionKeysFunctionOutputsPage", typeof(ZIMOFunctionKeysFunctionOutputsPage));
+            Routing.RegisterRoute("RCN225FunctionKeysFunctionOutputsPage", typeof(RCN225FunctionKeysFunctionOutputsPage));
+            Routing.RegisterRoute("DoehlerAndHaassFunctionKeysFunctionOutputsPage", typeof(DoehlerAndHaassFunctionKeysFunctionOutputsViewModel));
+
+            var app = builder.Build();
+
+            // Initialize the logging service after the platform has been built.
             Logger.Init(nameof(MauiProgram));
             Logger.LogInformation("Starting InitialSetup.DoFirstSetup() ...");
 
@@ -180,15 +186,9 @@ namespace Z2XProgrammer
 
             InitialSetup.DoFirstSetup();
 
-            Logger.LogInformation(" ... waiting for InitialSetup.DoFirstSetup() to complete ...");
             Logger.LogInformation("... InitialSetup.DoFirstSetup() has completed.");
 
-
-            Routing.RegisterRoute("ZIMOFunctionKeysFunctionOutputsPage", typeof(ZIMOFunctionKeysFunctionOutputsPage));
-            Routing.RegisterRoute("RCN225FunctionKeysFunctionOutputsPage", typeof(RCN225FunctionKeysFunctionOutputsPage));
-            Routing.RegisterRoute("DoehlerAndHaassFunctionKeysFunctionOutputsPage", typeof(DoehlerAndHaassFunctionKeysFunctionOutputsPage));
-
-            return builder.Build();
+            return app;
         }
     }
 }

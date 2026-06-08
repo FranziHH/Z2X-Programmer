@@ -21,6 +21,7 @@ https://github.com/PeterK78/Z2X-Programmer?tab=GPL-3.0-1-ov-file.
 
 */
 
+using System.IO;
 using Z2XProgrammer.DataModel;
 
 namespace Z2XProgrammer.FileAndFolderManagement
@@ -87,17 +88,17 @@ namespace Z2XProgrammer.FileAndFolderManagement
             {
                 if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
                 {
-                    return FileSystem.Current.AppDataDirectory + "\\DeqSpecs";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "DeqSpecs");
                 }
-                else if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+                else if (DeviceInfo.Current.Platform == DevicePlatform.Android || DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst || DeviceInfo.Current.Platform == DevicePlatform.iOS)
                 {
-                    return FileSystem.Current.AppDataDirectory + "/DeqSpecs";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "DeqSpecs");
                 }
-                return "";
+                return string.Empty;
             }
             catch
             {
-                return "";
+                return string.Empty;
             }
         }
 
@@ -135,7 +136,10 @@ namespace Z2XProgrammer.FileAndFolderManagement
         /// <returns>The path to the default user specific decoder specification folder</returns>
         private static string GetDefaultUserSpecificDecSpecsFolderPath()
         {
-            return GetDecSpecsFolderPath() + "\\UserSpecific";
+            var decSpecsFolderPath = GetDecSpecsFolderPath();
+            return string.IsNullOrEmpty(decSpecsFolderPath)
+                ? string.Empty
+                : Path.Combine(decSpecsFolderPath, "UserSpecific");
         }
 
         /// <summary>
@@ -148,17 +152,17 @@ namespace Z2XProgrammer.FileAndFolderManagement
             {
                 if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
                 {
-                    return FileSystem.Current.AppDataDirectory + "\\ManufacturesDB";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "ManufacturesDB");
                 }
-                else if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+                else if (DeviceInfo.Current.Platform == DevicePlatform.Android || DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst || DeviceInfo.Current.Platform == DevicePlatform.iOS)
                 {
-                    return FileSystem.Current.AppDataDirectory + "/ManufacturesDB";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "ManufacturesDB");
                 }
-                return "";
+                return string.Empty;
             }
             catch
             {
-                return "";
+                return string.Empty;
             }
         }
 
@@ -175,17 +179,17 @@ namespace Z2XProgrammer.FileAndFolderManagement
             {
                 if (DeviceInfo.Current.Platform == DevicePlatform.WinUI)
                 {
-                    return FileSystem.Current.AppDataDirectory + "\\Z2X";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "Z2X");
                 }
-                else if (DeviceInfo.Current.Platform == DevicePlatform.Android)
+                else if (DeviceInfo.Current.Platform == DevicePlatform.Android || DeviceInfo.Current.Platform == DevicePlatform.MacCatalyst || DeviceInfo.Current.Platform == DevicePlatform.iOS)
                 {
-                    return FileSystem.Current.AppDataDirectory + "/Z2X";
+                    return Path.Combine(FileSystem.Current.AppDataDirectory, "Z2X");
                 }
-                return "";
+                return string.Empty;
             }
             catch
             {
-                return "";
+                return string.Empty;
             }
         }
 
