@@ -371,3 +371,6 @@ FodyWeavers.xsd
 # Build Scripts
 build*.bat
 *.sh
+
+# Local Release Build Output
+*.dmg

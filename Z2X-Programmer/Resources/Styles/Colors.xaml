@@ -19,6 +19,7 @@
     <!-- The background color of the app -->
     <OnPlatform x:Key="AppBackground_Light" x:TypeArguments="Color">
         <On Platform="Android" Value="#f5f6ff" />
+        <On Platform="MacCatalyst" Value="#f9f9f9" />
         <On Platform="Default" Value="#f9f9f9" />
     </OnPlatform>
     <Color x:Key="AppBackground_Dark">#19172c</Color>
@@ -30,6 +31,7 @@
     <!-- The background color of the title bar -->
     <OnPlatform x:Key="TitleBarBackground_Light" x:TypeArguments="Color">
       <On Platform="Android" Value="#dbe2f0" />
+      <On Platform="MacCatalyst" Value="#f9f9f9" />
       <On Platform="Default" Value="#f9f9f9" />
     </OnPlatform>
     <Color x:Key="TitleBarBackground_Dark">#19172c</Color>
@@ -37,6 +39,7 @@
     <!-- Button colors -->    
     <OnPlatform x:Key="ButtonBackground_Light" x:TypeArguments="Color">
         <On Platform="Android" Value="#dbe2f0" />
+        <On Platform="MacCatalyst" Value="#f9f9f9" />
         <On Platform="Default" Value="#f9f9f9" />
     </OnPlatform>
     
@@ -48,6 +51,7 @@
     
     <OnPlatform x:Key="ButtonHighlight_Light" x:TypeArguments="Color">
         <On Platform="Android" Value="#dbe2f0" />
+        <On Platform="MacCatalyst" Value="#f3f3f3" />
         <On Platform="Default" Value="#f3f3f3" />
     </OnPlatform>
     
@@ -85,6 +89,7 @@
     <!-- The colors of a frame (border) -->
     <OnPlatform x:Key="FrameBackgroundColor_Light" x:TypeArguments="Color">
         <On Platform="Android" Value="#fafcfd" />
+        <On Platform="MacCatalyst" Value="#fafcfd" />
         <On Platform="Default" Value="#fafcfd" />
     </OnPlatform>   
     <Color x:Key="FrameBackgroundColor_Dark">#2c2848</Color>
