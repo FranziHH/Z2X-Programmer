@@ -20,11 +20,8 @@ jobs:
       matrix:
         include:
           - arch: x64
-            runner: macos-14
+            runner: self-hosted
             rid: maccatalyst-x64
-          - arch: arm64
-            runner: macos-14-arm64
-            rid: maccatalyst-arm64
 
     runs-on: ${{ matrix.runner }}
 
@@ -40,21 +37,15 @@ jobs:
         run: dotnet workload install maui
 
       - name: Restore dependencies
-        run: dotnet restore Z2X-Programmer/Z2X-Programmer.csproj
+        run: dotnet restore Z2X-Programmer/Z2X-Programmer.csproj /p:RuntimeIdentifier=${{ matrix.rid }}
 
       - name: Build Mac Catalyst
         run: dotnet build Z2X-Programmer/Z2X-Programmer.csproj -c Release -f net10.0-maccatalyst /p:RuntimeIdentifier=${{ matrix.rid }} --no-restore
 
       - name: Create Mac Catalyst ZIP Archive
         run: |
-          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst
-          zip -r Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip "${{ matrix.rid }}"
-
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: Z2X-Programmer-MacCatalyst-${{ matrix.arch }}
-          path: Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst/${{ matrix.rid }}
+          zip -r ../../Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip Z2X-Programmer.app
 
       - name: Update Latest Release
         uses: softprops/action-gh-release@v2
