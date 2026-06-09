@@ -44,8 +44,8 @@ jobs:
 
       - name: Create Mac Catalyst ZIP Archive
         run: |
-          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst/${{ matrix.rid }}
-          zip -r ../Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip Z2X-Programmer.app
+          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst/maccatalyst-x64
+          zip -r ../Z2X-Programmer-Intel-x64.zip Z2X-Programmer.app
 
       - name: Move latest tag
         if: github.event_name == 'push'
@@ -64,7 +64,7 @@ jobs:
           prerelease: false
           make_latest: true
           files: |
-            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-Intel-x64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -77,6 +77,6 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-MacCatalyst-${{ matrix.arch }}.zip
+            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-Intel-x64.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
