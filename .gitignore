@@ -369,8 +369,11 @@ FodyWeavers.xsd
 *.p12
 
 # Build Scripts
-build*.bat
-*.sh
+# only for testing ...
+build-release-dmg.sh
 
 # Local Release Build Output
 *.dmg
+
+# Secrets
+.env
