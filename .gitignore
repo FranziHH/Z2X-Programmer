@@ -368,5 +368,5 @@ FodyWeavers.xsd
 *.jks
 *.p12
 
-# Build Scripts
-build*.bat
+# Secrets
+.env
