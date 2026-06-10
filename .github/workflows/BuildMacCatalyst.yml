@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    
   workflow_dispatch:
       inputs:
         update_release:
@@ -16,14 +17,12 @@ on:
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, '[skip]')"
-    strategy:
-      matrix:
-        include:
-          - arch: x64
-            runner: self-hosted
-            rid: maccatalyst-x64
-
-    runs-on: ${{ matrix.runner }}
+    runs-on: self-hosted
+    env:
+      PROJECT_PATH: "Z2X-Programmer/Z2X-Programmer.csproj"
+      RID: "maccatalyst-x64"
+      OUTPUT_DIR: "publish"
+      ZIP_NAME: "Z2X-Programmer-Intel-x64.zip"
 
     steps:
       - uses: actions/checkout@v4
@@ -36,25 +35,36 @@ jobs:
       - name: Install MAUI workload
         run: dotnet workload install maui
 
-      - name: Restore dependencies
-        run: dotnet restore Z2X-Programmer/Z2X-Programmer.csproj /p:RuntimeIdentifier=${{ matrix.rid }}
-
-      - name: Build Mac Catalyst
-        run: dotnet build Z2X-Programmer/Z2X-Programmer.csproj -c Release -f net10.0-maccatalyst /p:RuntimeIdentifier=${{ matrix.rid }} --no-restore
-
-      - name: Create Mac Catalyst ZIP Archive
+      - name: Clean previous builds
         run: |
-          cd Z2X-Programmer/bin/Release/net10.0-maccatalyst/maccatalyst-x64
-          zip -r ../Z2X-Programmer-Intel-x64.zip Z2X-Programmer.app
+          rm -rf ${{ env.OUTPUT_DIR }}
+          dotnet clean ${{ env.PROJECT_PATH }} -c Release
+
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.PROJECT_PATH }} -r ${{ env.RID }}
+
+      - name: Build and Publish
+        run: |
+          dotnet publish ${{ env.PROJECT_PATH }} \
+          -c Release \
+          -f net10.0-maccatalyst \
+          -r ${{ env.RID }} \
+          --no-restore \
+          -o ${{ env.OUTPUT_DIR }}
+
+      - name: Create ZIP Archive
+        run: |
+          cd ${{ env.OUTPUT_DIR }}
+          zip -r ../${{ env.ZIP_NAME }} *.app
 
       - name: Move latest tag
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           git tag -f latest
           git push origin -f latest
 
       - name: Update Latest Release
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
@@ -63,8 +73,7 @@ jobs:
           draft: false
           prerelease: false
           make_latest: true
-          files: |
-            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-Intel-x64.zip
+          files: ${{ env.ZIP_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -76,7 +85,6 @@ jobs:
           name: "Release ${{ github.ref_name }}"
           draft: false
           prerelease: false
-          files: |
-            Z2X-Programmer/bin/Release/net10.0-maccatalyst/Z2X-Programmer-Intel-x64.zip
+          files: ${{ env.ZIP_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
