@@ -1,0 +1,17 @@
+name: Move latest tag
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  move-latest:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move latest tag
+        run: |
+          git tag -f latest
+          git push origin -f latest

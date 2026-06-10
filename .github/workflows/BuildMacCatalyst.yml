@@ -51,12 +51,6 @@ jobs:
           cd Z2X-Programmer/bin/Release/net10.0-maccatalyst/maccatalyst-x64
           zip -r ../Z2X-Programmer-${{ matrix.rid }}.zip Z2X-Programmer.app
 
-      - name: Move latest tag
-        if: github.event_name == 'push'
-        run: |
-          git tag -f latest
-          git push origin -f latest
-
       - name: Update Latest Release
         if: github.event_name == 'push'
         uses: softprops/action-gh-release@v2
