@@ -368,5 +368,12 @@ FodyWeavers.xsd
 *.jks
 *.p12
 
+# Build Scripts
+# only for testing ...
+build-release-dmg.sh
+
+# Local Release Build Output
+*.dmg
+
 # Secrets
 .env

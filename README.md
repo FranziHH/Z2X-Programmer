@@ -117,4 +117,22 @@ You can create your own decoder specification file at any time.
 ## License
 
 * The original source code in this repository is licensed under the GNU GPLv3 license.
-* Microsoft, Z21, Fleischmann, ZIMO and Roco are registered trademarks of their respective companies.
+* Microsoft, Z21, Fleischmann, ZIMO and Roco are registered trademarks of their respective companies.## Mac Catalyst Test Builds
+
+This repository also includes a GitHub Actions workflow for Mac Catalyst builds.
+The workflow produces unsigned app bundles for the following architectures:
+
+* `maccatalyst-x64` for Intel Macs
+* `maccatalyst-arm64` for Apple Silicon Macs
+
+> Note: These are test builds only. They are not signed or notarized by Apple.
+> On a Mac, you may need to allow the app manually via right-click / `Open` or the security settings.
+
+If you want to run a build locally, use:
+
+```bash
+cd /Users/franzi/Github/Z2X-Programmer
+dotnet build Z2X-Programmer/Z2X-Programmer.csproj -c Release -f net10.0-maccatalyst /p:RuntimeIdentifier=maccatalyst-x64
+```
+
+Replace `maccatalyst-x64` with `maccatalyst-arm64` for Apple Silicon.
