@@ -114,8 +114,30 @@ You can create your own decoder specification file at any time.
   * [Download Desktop Runtime v10.0.8 (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-10.0.8-windows-x86-installer?cid=getdotnetcore)
   * [Download Desktop Runtime v10.0.8 (x64)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-10.0.8-windows-x64-installer?cid=getdotnetcore)
 
+## Builds
+
+* The software provided in this release is built using the new workflow scripts.
+
+### macOS
+
+* Only the Intel version is available for macOS; GitHub does not currently provide a build environment.
+
+* The build is created using a ``self-hosted runner``
+
+* This build is for testing purposes only and is not signed.
+
+#### Installation on Mac: Intel only!
+
+* Download the *.zip file.
+* Extract it to your Downloads folder (double-click).
+* Open Terminal.
+* Run ``xattr -rd com.apple.quarantine "~/Downloads/Z2X-Programmer.app"``
+* Now you can move the app to Applications and it should launch.
+
+**There is currently no solution: local network access is not possible.**
+
 ## License
 
 * The original source code in this repository is licensed under the GNU GPLv3 license.
-* Microsoft, Z21, Fleischmann, ZIMO and Roco are registered trademarks of their respective companies.## Mac Catalyst Test Builds
+* Microsoft, Z21, Fleischmann, ZIMO and Roco are registered trademarks of their respective companies.
 
