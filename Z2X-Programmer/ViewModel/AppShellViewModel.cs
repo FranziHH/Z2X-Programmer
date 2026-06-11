@@ -653,7 +653,7 @@ namespace Z2XProgrammer.ViewModel
                 }
                 else if (action == AppResources.ExtendedMenuItemReportProblem)
                 {
-                    await Browser.OpenAsync("https://github.com/PeterK78/Z2X-Programmer/issues");
+                    await Browser.OpenAsync("https://github.com/FranziHH/Z2X-Programmer/issues");
                 }
 
 

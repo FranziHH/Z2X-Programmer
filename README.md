@@ -19,9 +19,8 @@ The original author (**PeterK78**) has deleted their GitHub account and the orig
 <img src="Assets/appiconfg.svg" width="100"/>
 
 # Z2X-Programmer
-[![Z2X-Programmer Documentation](Assets/Z2X_Programmer-Badge-Documentation.svg)](Docs/Programmbeschreibung%20Z2X-Programmer.pdf)
-[![Download Z2X-Programmer](Assets/Z2X_Programmer-Badge-Download.svg)](../../releases)
-[![Download Z2X-Programmer](Assets/Z2X_Programmer-Badge-Download-Dev.svg)](../../actions)
+[![Z2X-Programmer Documentation](Assets/Z2X_Programmer-Documentation.svg)](Docs/Programmbeschreibung%20Z2X-Programmer.pdf)
+[![Download Z2X-Programmer](Assets/Z2X_Programmer-Download.svg)](../../releases)
 
 Z2X-Programmer is an application to configure locomotive and function decoders by using a Roco / Fleischmann Z21 compatible digital command station. 
 The application is aimed at beginner level users who want to configure the most essential functions of their decoders in a simple and intuitive way. 
